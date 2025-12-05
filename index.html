@@ -1,31 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Animated website</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Socially — Make New Friends</title>
+
+  <!-- AOS CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+  />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="main">
-    <nav>
-      <img src="./logo.png" class="logo">
-      <ul>
-        <li><a href="#"></a>Features</li>
-        <li><a href="#"></a>How it works</li>
-        <li><a href="#"></a>Privacy</li>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="nav-left">
+        <img src="./logo.png" class="logo" alt="Socially logo" />
+        <h2 class="brand-name">Socially</h2>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#how-it-works">How it works</a></li>
+        <li><a href="#privacy">Privacy</a></li>
       </ul>
-     <div>
-      <a href="#" class="log-in">Log in</a>
-      <a href="#" class="btn">Download Now</a>
-     </div>
+
+      <div class="nav-right">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+          🌙
+        </button>
+        <a href="#" class="login">Log in</a>
+        <a href="#download" class="btn-primary">Download</a>
+      </div>
+
+      <!-- Mobile hamburger button -->
+      <button
+        class="nav-toggle"
+        id="nav-toggle"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </nav>
-    <div class="content">
-      <h1 class="anim">MAKE <br>NEW FRIENDS</h1>
-      <p class="anim">Socially is new social media platform to make friends online in the world. Now let's explore it's features.</p>
-      <a href="#" class="btn anim">Join Now</a>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobile-menu">
+      <div class="mobile-menu-header">
+        <span class="mobile-brand">Socially</span>
+        <button
+          class="mobile-close"
+          id="mobile-close"
+          aria-label="Close navigation"
+        >
+          ✕
+        </button>
+      </div>
+
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#how-it-works">How it works</a></li>
+        <li><a href="#privacy">Privacy</a></li>
+      </ul>
+
+      <div class="mobile-actions">
+        <a href="#" class="login">Log in</a>
+        <a href="#download" class="btn-primary">Download</a>
+      </div>
     </div>
-    <img src="./pic.png" class="feature-img anim">
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-text" data-aos="fade-right">
+        <h1>
+          Connect.<br />
+          <span>Make Friends.</span><br />
+          Be Social.
+        </h1>
+        <p>
+          A new way to meet amazing people worldwide. Join Socially and become
+          part of something bigger than your feed.
+        </p>
+        <a href="#download" class="btn-secondary">Join Now</a>
+        <div class="hero-stats">
+          <div>
+            <h3>2M+</h3>
+            <p>Active users</p>
+          </div>
+          <div>
+            <h3>190+</h3>
+            <p>Countries</p>
+          </div>
+          <div>
+            <h3>4.9★</h3>
+            <p>App rating</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-img-wrapper" data-aos="fade-left">
+        <div class="float-shape circle"></div>
+        <div class="float-shape square"></div>
+        <div class="float-shape diamond"></div>
+        <img src="./pic.png" class="hero-img" alt="Girl using Socially" />
+      </div>
+    </section>
   </div>
+
+  <!-- FEATURES -->
+  <section id="features" class="section">
+    <div class="section-header" data-aos="fade-up">
+      <h2 class="section-title">Features</h2>
+      <p class="section-subtitle">
+        Everything you need to make real connections in a safe & fun way.
+      </p>
+    </div>
+
+    <div class="features-grid">
+      <div class="card" data-aos="zoom-in">
+        <span class="card-icon">💬</span>
+        <h3>Smart Matching</h3>
+        <p>
+          Get matched with people who share your interests, hobbies and vibe —
+          instantly.
+        </p>
+      </div>
+
+      <div class="card" data-aos="zoom-in" data-aos-delay="150">
+        <span class="card-icon">🛡️</span>
+        <h3>Safe by Design</h3>
+        <p>
+          Built-in safety tools, reporting and verification to keep your
+          experience positive.
+        </p>
+      </div>
+
+      <div class="card" data-aos="zoom-in" data-aos-delay="300">
+        <span class="card-icon">🎧</span>
+        <h3>Social Rooms</h3>
+        <p>
+          Join live rooms, listen to music together and talk with people in
+          real time.
+        </p>
+      </div>
+
+      <div class="card" data-aos="zoom-in" data-aos-delay="450">
+        <span class="card-icon">✨</span>
+        <h3>Personal Profiles</h3>
+        <p>
+          Express yourself with stories, interests, and highlights that feel
+          truly you.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how-it-works" class="section section-alt">
+    <div class="section-header" data-aos="fade-up">
+      <h2 class="section-title">How it works</h2>
+      <p class="section-subtitle">
+        Getting started takes less than a minute. Here’s the flow.
+      </p>
+    </div>
+
+    <div class="steps">
+      <div class="step" data-aos="fade-up">
+        <span class="step-number">01</span>
+        <h3>Create your profile</h3>
+        <p>
+          Download the app, sign up and tell us about your interests and what
+          kind of friends you're looking for.
+        </p>
+      </div>
+
+      <div class="step" data-aos="fade-up" data-aos-delay="150">
+        <span class="step-number">02</span>
+        <h3>Discover people</h3>
+        <p>
+          Our smart matching engine surfaces users, groups and rooms that align
+          with your energy.
+        </p>
+      </div>
+
+      <div class="step" data-aos="fade-up" data-aos-delay="300">
+        <span class="step-number">03</span>
+        <h3>Start connecting</h3>
+        <p>
+          Chat, join rooms, share content and grow your circle — all in one
+          place.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRIVACY -->
+  <section id="privacy" class="section">
+    <div class="privacy-wrapper" data-aos="fade-up">
+      <div>
+        <h2 class="section-title">Privacy first. Always.</h2>
+        <p class="section-subtitle">
+          We believe social apps should respect your space, time and data.
+        </p>
+        <ul class="privacy-list">
+          <li>✅ You control who can find and message you.</li>
+          <li>✅ Clear reporting & block tools in every chat.</li>
+          <li>✅ No selling your personal data — ever.</li>
+        </ul>
+      </div>
+
+      <div class="privacy-card">
+        <h3>Transparency</h3>
+        <p>
+          Our policies are written in human language so you know exactly what's
+          happening with your information.
+        </p>
+        <a href="#" class="link">Read full privacy policy →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOWNLOAD / CTA -->
+  <section id="download" class="section section-alt">
+    <div class="cta" data-aos="zoom-in">
+      <h2 class="section-title">Ready to be Socially?</h2>
+      <p class="section-subtitle">
+        Join millions of people already making friends on Socially.
+      </p>
+      <div class="cta-buttons">
+        <a href="#" class="btn-primary large">Download for Android</a>
+        <a href="#" class="btn-secondary large">Download for iOS</a>
+      </div>
+      <p class="small-note">No ads. No spam. Just real people.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© <span id="year"></span> Socially. All rights reserved.</p>
+  </footer>
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- APP JS -->
+  <script src="app.js"></script>
 </body>
 </html>
