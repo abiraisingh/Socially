@@ -40,6 +40,12 @@ body {
   overflow-x: hidden;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
 body.no-scroll {
   overflow: hidden;
 }
@@ -283,13 +289,18 @@ body.dark .theme-toggle {
 /* Hero image + floating shapes */
 .hero-img-wrapper {
   position: relative;
+  /* new: take full width of parent */
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .hero-img {
-  width: 420px;
+  max-width: 420px;      /* desktop max size */
+  width: 100%;           /* scale down with screen */
+  height: auto;
   filter: drop-shadow(0 10px 40px rgba(0, 0, 0, 0.2));
 }
-
 /* FLOATING ICONS / SHAPES */
 .float-shape {
   position: absolute;
@@ -614,11 +625,21 @@ body.dark .theme-toggle {
   }
 
   .hero-img {
-    width: 320px;
+    max-width: 320px;
   }
 
   .privacy-wrapper {
     grid-template-columns: 1fr;
+  }
+   .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    margin-top: 50px;
+    align-items: stretch; 
+  }
+
+  .hero-img-wrapper {
+    width: 100%;
   }
 }
 
